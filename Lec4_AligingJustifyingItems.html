@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body
+        {
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        #content
+        {
+
+            display: grid;
+            max-width: 960px;
+            margin: 0 auto;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px;
+            /* grid-template-rows: repeat(4,minmax(150px,auto)); */
+            grid-auto-rows: minmax(150px,auto);
+            /* Take only the height of the content and start at start or end depending on the property assigned */
+            /* align-items: end;  */
+            /* align-items: stretch;   */ /* The default value given on the elements*/
+            
+            /* Same goes for jusitfy. 
+            
+            1. Justify start only takes width of the element and displays at the start of the column, 
+            2. Justify end only takes width of the element and displays at the end of the column */
+     
+            /* justify-items: start; */
+        
+        }
+        
+        #content div
+        {
+            background-color: #3bbced;
+            padding: 30px;
+        
+        }
+        
+        #content div:nth-child(even)
+        {
+            background-color: #777;
+        }
+
+
+        .one
+        {
+            justify-self: end;
+            align-self: flex-end;
+        }
+
+
+        .two
+        {
+            align-self: center;
+            justify-self: center;
+        }
+
+        .three
+        {
+            align-self: start;
+            justify-self: start;
+        }
+        
+        </style>
+
+</head>
+<body>
+    
+<div id="content">
+
+
+
+    <div class="one">
+        1
+    </div>
+
+    <div class="two">
+        2
+    </div>
+    <div class="three">
+        3
+    </div>
+    <div class="four">
+        4
+    </div>
+    <div class="five">
+        5
+    </div>
+    <div class="six">
+        6
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
